@@ -1,0 +1,85 @@
+@use "./color/variables.scss" as *;
+@use "./font.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+}
+
+:root {
+  background-color: $color-bg-default;
+  -webkit-tap-highlight-color: transparent;
+  color: $color-fg-default;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-wrap: break-word;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+html,
+body,
+#__nuxt,
+#app {
+  height: 100%;
+}
+body {
+  @include font-normal;
+  -webkit-font-smoothing: antialiased;
+}
+#app {
+  isolation: isolate;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: start;
+}
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}

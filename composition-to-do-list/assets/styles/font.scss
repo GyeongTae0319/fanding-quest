@@ -1,0 +1,120 @@
+@mixin font-normal {
+  @include font-f4();
+}
+@mixin font-italic {
+  @include font-normal();
+  font-style: italic;
+}
+@mixin font-bold {
+  @include font-normal();
+  font-weight: 600;
+  letter-spacing: -0.15px;
+}
+@mixin font-underline {
+  @include font-normal();
+  text-decoration: underline;
+}
+@mixin font-emphasized {
+  @include font-normal();
+  font-weight: 600;
+}
+@mixin font-small {
+  @include font-f5();
+}
+@mixin font-small-bold {
+  @include font-small();
+  font-weight: 600;
+}
+@mixin font-x-small {
+  @include font-f6();
+}
+@mixin font-x-small-bold {
+  @include font-x-small();
+  font-weight: 600;
+}
+@mixin font-lead {
+  @include font-f3();
+  font-weight: 300;
+}
+
+@mixin font-h1 {
+  @include font-f1();
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+@mixin font-h2 {
+  @include font-f2();
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+@mixin font-h3 {
+  @include font-f3();
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+@mixin font-h4 {
+  @include font-f4();
+  font-weight: 600;
+}
+@mixin font-h5 {
+  @include font-f5();
+  font-weight: 600;
+}
+@mixin font-h6 {
+  @include font-f6();
+  font-weight: 600;
+}
+
+@mixin font-code-x-large {
+  @include font-f2();
+  font-family: D2Coding;
+}
+@mixin font-code-large {
+  @include font-f4();
+  font-family: D2Coding;
+}
+@mixin font-code-large-bold {
+  @include font-code-large();
+  font-weight: 600;
+}
+@mixin font-code {
+  @include font-f5();
+  font-family: D2Coding;
+}
+@mixin font-code-small {
+  @include font-f6();
+  font-family: D2Coding;
+}
+
+@mixin font-f00 {
+  font-size: 48px;
+  line-height: 72px;
+}
+@mixin font-f0 {
+  font-size: 40px;
+  line-height: 60px;
+}
+@mixin font-f1 {
+  font-size: 32px;
+  line-height: 48px;
+}
+@mixin font-f2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+@mixin font-f3 {
+  font-size: 20px;
+  line-height: 30px;
+}
+@mixin font-f4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+@mixin font-f5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+@mixin font-f6 {
+  font-size: 12px;
+  line-height: 18px;
+}

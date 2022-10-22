@@ -1,0 +1,13 @@
+@use "./reset.scss";
+@use "./color/mixins.scss" as color;
+
+:root {
+  @include color.palette;
+
+  @media (prefers-color-scheme: dark) {
+    @include color.dark-theme;
+  }
+  @media (prefers-color-scheme: light) {
+    @include color.light-theme;
+  }
+}
