@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   css: ["~/assets/styles/root.scss"],
-  modules: ["@vueuse/nuxt", "nuxt-icon"],
+  modules: ["@pinia/nuxt", "@vueuse/nuxt", "nuxt-icon"],
   typescript: {
     strict: true,
   },
