@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { NewDialog } from "#components";
+
 const sections = [
   {
     title: "보기 방식",
@@ -11,11 +13,16 @@ const sections = [
   {
     title: "관리",
     items: [
-      { to: "/new", label: "할 일 추가", icon: "octicon:plus-16" },
+      { action: showNewDialog, label: "할 일 추가", icon: "octicon:plus-16" },
       { to: "/settings", label: "설정", icon: "octicon:gear-16" },
     ],
   },
 ];
+
+const newDialog = ref<InstanceType<typeof NewDialog> | null>(null);
+function showNewDialog() {
+  newDialog.value?.show();
+}
 </script>
 
 <template>
@@ -25,9 +32,9 @@ const sections = [
       <SidebarSection
         v-for="{ title, items } in sections"
         :title="title"
-        :items="items"
-      />
+        :items="items" />
     </nav>
+    <NewDialog ref="newDialog" />
   </div>
 </template>
 

@@ -1,18 +1,7 @@
 <script setup lang="ts">
-import { StyleValue } from "vue";
-
-const { layoutMargin } = useLayout();
+const { layoutMargin, layoutMarginStyleVariables, pageMarginStyleVariables } =
+  useLayout();
 layoutMargin.value.left = 300;
-
-const appStyles = computed<StyleValue>(() => {
-  const { top, right, bottom, left } = layoutMargin.value;
-  return {
-    "--layout-margin-top": `${top}px`,
-    "--layout-margin-right": `${right}px`,
-    "--layout-margin-bottom": `${bottom}px`,
-    "--layout-margin-left": `${left}px`,
-  };
-});
 
 useHead({
   titleTemplate: (title) => {
@@ -24,7 +13,11 @@ useHead({
 </script>
 
 <template>
-  <div id="app" class="app" :style="appStyles">
+  <div
+    id="app"
+    class="app"
+    :style="[layoutMarginStyleVariables, pageMarginStyleVariables]"
+  >
     <Sidebar class="app__sidebar" />
     <NuxtPage class="app__main" />
   </div>

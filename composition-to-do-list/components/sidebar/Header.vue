@@ -27,6 +27,8 @@ const userName = "Blro";
   border-bottom: 1px solid $color-border-muted;
   background-color: $color-bg-overlay;
 
+  color: $color-fg-emphasis;
+
   &__name {
     gap: 8px;
     padding: 4px 8px;

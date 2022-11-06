@@ -107,8 +107,8 @@
   --color-bg-default: var(--color-gray-9);
   --color-bg-overlay: var(--color-gray-8);
   --color-bg-inset: var(--color-black);
-  --color-bg-hover: rgba(255, 255, 255, 0.075);
-  --color-bg-press: rgba(255, 255, 255, 0.06);
+  --color-bg-hover: rgba(255 255 255 / 0.075);
+  --color-bg-press: rgba(255 255 255 / 0.06);
 
   --color-border-default: var(--color-gray-6);
   --color-border-muted: var(--color-gray-7);
