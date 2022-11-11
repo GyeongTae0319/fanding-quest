@@ -1,3 +1,4 @@
+import { formatISO } from "date-fns";
 import { defineStore } from "pinia";
 
 export type Color = string;
@@ -8,8 +9,9 @@ export interface Todo {
   name: string;
   color: Color;
   state: State;
-  start?: string;
-  end?: string;
+  createdAt: string;
+  startAt?: string;
+  endAt?: string;
 }
 
 export const useTodoStore = defineStore("todo", () => {
@@ -19,7 +21,13 @@ export const useTodoStore = defineStore("todo", () => {
   const todo = ref(new Map<string, Todo>());
 
   function addTodo(name: string, color: Color) {
-    const item: Todo = { name, color, id: useUuid(), state: "backlog" };
+    const item: Todo = {
+      name,
+      color,
+      id: useUuid(),
+      state: "backlog",
+      createdAt: formatISO(new Date()),
+    };
     todo.value.set(item.id, item);
   }
   function deleteTodo(id: string) {
